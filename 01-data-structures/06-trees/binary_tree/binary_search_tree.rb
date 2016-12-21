@@ -7,6 +7,11 @@ class BinarySearchTree
   end
 
   def insert(root, node)
+    if node.rating < root.rating
+      root.left ? insert(root.left, node) : root.left = node
+    else
+      root.right ? insert(root.right, node) : root.right = node
+    end
   end
 
   # Recursive Depth First Search
