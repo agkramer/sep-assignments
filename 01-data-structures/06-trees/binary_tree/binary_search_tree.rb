@@ -3,6 +3,7 @@ require_relative 'node'
 class BinarySearchTree
 
   def initialize(root)
+    @root = root
   end
 
   def insert(root, node)
