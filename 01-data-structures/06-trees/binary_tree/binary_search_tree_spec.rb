@@ -54,47 +54,47 @@ RSpec.describe BinarySearchTree, type: Class do
     end
   end
 
-  # describe "#find(data)" do
-  #   it "handles nil gracefully" do
-  #     tree.insert(root, empire)
-  #     tree.insert(root, mad_max_2)
-  #     expect(tree.find(root, nil)).to eq nil
-  #   end
-  #
-  #   it "properly finds a left node" do
-  #     tree.insert(root, pacific_rim)
-  #     expect(tree.find(root, pacific_rim.title).title).to eq "Pacific Rim"
-  #   end
-  #
-  #   it "properly finds a left-left node" do
-  #     tree.insert(root, braveheart)
-  #     tree.insert(root, pacific_rim)
-  #     expect(tree.find(root, pacific_rim.title).title).to eq "Pacific Rim"
-  #   end
-  #
-  #   it "properly finds a left-right node" do
-  #     tree.insert(root, donnie)
-  #     tree.insert(root, inception)
-  #     expect(tree.find(root, inception.title).title).to eq "Inception"
-  #   end
-  #
-  #   it "properly finds a right node" do
-  #     tree.insert(root, district)
-  #     expect(tree.find(root, district.title).title).to eq "District 9"
-  #   end
-  #
-  #   it "properly finds a right-left node" do
-  #     tree.insert(root, hope)
-  #     tree.insert(root, martian)
-  #     expect(tree.find(root, martian.title).title).to eq "The Martian"
-  #   end
-  #
-  #   it "properly finds a right-right node" do
-  #     tree.insert(root, empire)
-  #     tree.insert(root, mad_max_2)
-  #     expect(tree.find(root, mad_max_2.title).title).to eq "Mad Max 2: The Road Warrior"
-  #   end
-  # end
+  describe "#find(data)" do
+    it "handles nil gracefully" do
+      tree.insert(root, empire)
+      tree.insert(root, mad_max_2)
+      expect(tree.find(root, nil)).to eq nil
+    end
+
+    it "properly finds a left node" do
+      tree.insert(root, pacific_rim)
+      expect(tree.find(root, pacific_rim.title).title).to eq "Pacific Rim"
+    end
+
+    it "properly finds a left-left node" do
+      tree.insert(root, braveheart)
+      tree.insert(root, pacific_rim)
+      expect(tree.find(root, pacific_rim.title).title).to eq "Pacific Rim"
+    end
+
+    it "properly finds a left-right node" do
+      tree.insert(root, donnie)
+      tree.insert(root, inception)
+      expect(tree.find(root, inception.title).title).to eq "Inception"
+    end
+
+    it "properly finds a right node" do
+      tree.insert(root, district)
+      expect(tree.find(root, district.title).title).to eq "District 9"
+    end
+
+    it "properly finds a right-left node" do
+      tree.insert(root, hope)
+      tree.insert(root, martian)
+      expect(tree.find(root, martian.title).title).to eq "The Martian"
+    end
+
+    it "properly finds a right-right node" do
+      tree.insert(root, empire)
+      tree.insert(root, mad_max_2)
+      expect(tree.find(root, mad_max_2.title).title).to eq "Mad Max 2: The Road Warrior"
+    end
+  end
 
   # describe "#delete(data)" do
   #   it "handles nil gracefully" do
