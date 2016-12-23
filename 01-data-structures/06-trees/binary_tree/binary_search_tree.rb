@@ -16,32 +16,38 @@ class BinarySearchTree
 
   # Recursive Depth First Search
   def find(root, data) # data is a title, so annoying
-    if data.nil?
-      return nil
-    end
-
-    if root.title == data
-      return root
-    else
-      if root.left
-        left = find(root.left, data)
-      end
-
-      if root.right
-        right = find(root.right, data)
-      end
-
-      if left
-        return left
-      elsif right
-        return right
+    unless root.nil? || data.nil?
+      if root.title == data
+        node = root
       else
-        return nil
+        if root.left
+          node = find(root.left, data)
+        end
+
+        if root.right
+          node = find(root.right, data)
+        end
       end
     end
+
+    node
   end
 
+
+
+  # def findByRating(root, ranking) #rating == ranking
+  #
+  # end
+
   def delete(root, data)
+
+    # if no children (left.nil? && right.nil?), remove
+
+    # elseif one child (left.nil), move child into its place
+
+    # else
+
+
   end
 
   # Recursive Breadth First Search
